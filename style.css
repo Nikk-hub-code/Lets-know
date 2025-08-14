@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000000;
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: relative;
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce{
+    0%, 100%{
+        bottom: 0;
+        animation-timing-function: ease-out;
+    }
+    50%{
+        bottom: 200px;
+        animation-timing-function: ease-in;
+    }
+}
+#content{
+    opacity: 0;
+    transition: opacity 1s ease;
+    padding: 20px;
+}
+#content.show-content {
+    opacity: 1;
+}
+header{
+    height: 40px;
+    background-color: #121212;
+    text-align: end;
+    padding-right: 100px;
+    padding-top: 20px;
+    border-radius: 40px;
+}
+.menu a{
+    margin-left: 30px;
+}
+.hero-section{
+    display: flex;
+}
+.greet-animate{
+    height: 88vh;
+    width: 60vw;
+}
+.robot-container{
+    height: 88vh;
+    width: 40vw;
+}
+.title-text{
+    position: absolute;
+    animation: switchTitles 4s infinite;
+}
+.py-dev{
+    animation-delay: 0s;
+}
+.web-dev{
+    animation-delay: 2s;
+}
+@keyframes switchTitles {
+    0% {
+        opacity: 0;
+    }
+    10%, 40% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+.text-area{
+    height: 15rem;
+    margin-top: 20vh;
+    margin-left: 3vw;
+}
+.text-area p{
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.text-area h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.title-text h1{
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: #259FDE;
+}
+.social-connect{
+    width: 15vw;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.robot-container{
+
+}
